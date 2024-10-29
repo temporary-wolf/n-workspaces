@@ -90,7 +90,6 @@ public static class NewTollCalculator
     }
 
 
-// Using nager here, but would probably create my own library to check holidays if it was for the government
     private static bool IsTollFreeDate(DateTimeOffset date)
     {
         if (date.DayOfWeek is DayOfWeek.Saturday or DayOfWeek.Sunday)
