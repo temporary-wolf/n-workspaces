@@ -1,6 +1,6 @@
 # Norion kodtest
 Jag har skrivit detta dokument som beskriver vad jag gjort samt skapat en ny fil
-NewTollCalculator.cs som implementerar dessa ändringar.
+`source/TollCalculatorsNewTollCalculator.cs` som implementerar dessa ändringar.
 
 # Brister i koden
 Jag har en personlig filosofi att man ska vara lite försiktig att skriva om kod som fungerar, då det ofta finns mer produktiva saker att lägga tiden på.
@@ -15,7 +15,7 @@ Om jag skulle skriva om koden så som jag skulle uppskatta den så skulle jag ä
 
 - Problem: Antagande att datumen som går in i GetTollFee är för en och samma dag.
   Förbättring: Asserta att datumen hör till samma dag och kasta exception annars.
-- 
+
 - Problem: GetTollFee har en overload med omvänd ordning på argumenten och de gör olika saker. Extremt ondskefullt kodande.
   Lösning: Skriv inga onda overloads
 
