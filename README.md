@@ -11,26 +11,26 @@ Om jag skulle skriva om koden så som jag skulle uppskatta den så skulle jag ä
 # Saker jag vill förbättra
 
 - Problem: Antagande att datumen som går in i GetTollFee är i svensk lokal tid.
-  Förbättring: Asserta att datumen är i svensk tid och kasta exception annars.
-
+- Lösning: Asserta att datumen är i svensk tid och kasta exception annars.
+---
 - Problem: Antagande att datumen som går in i GetTollFee är för en och samma dag.
-  Förbättring: Asserta att datumen hör till samma dag och kasta exception annars.
-
+- Lösning: Asserta att datumen hör till samma dag och kasta exception annars.
+---
 - Problem: GetTollFee har en overload med omvänd ordning på argumenten och de gör olika saker. Extremt ondskefullt kodande.
-  Lösning: Skriv inga onda overloads
-
+- Lösning: Skriv inga onda overloads
+---
 - Problem: Classes med en funktion som bara returnerar en string som egentligen bör vara en enum.
-  Lösning: Använd inte classer utan använd bara enumen direkt.
-
+- Lösning: Använd inte classer utan använd bara enumen direkt.
+---
 - Problem: Konstig ToString-Cast av enums istället för att använda enum-jämförelse.
-  Lösning: Jämför enums mot varandra.
-
+- Lösning: Jämför enums mot varandra.
+---
 - Problem: Onödigt komplicerad business-logik för GetTollFee som också inte funkar som jag tycker den ska göra. See tolkning nedan för min tolkning. Efter närmare efterforskning så ser jag att den inte ens funkar...
 - Lösning: Använd tidsfönster-algoritm som definierat nedan
-
+---
 - Problem: Komplicerade if else statements i IsTollFreeDate där det inte är uppenbart vad de olika datumen representerar och som också går out of date
 - Lösning: Använd ett bibliotek som har koll på svenska helgdagar
-
+---
 - Problem: Inga tester, vilket gör att många buggar i koden går lösa
 - Lösning: Skriv tester som ser till att koden för getTollFee stämmer överens med vad vi förväntar oss, samma med getDailyTollFee
   (Jag skriver inte alla tester nu, men hade skrivit tester för businesslogiken om jag lagt mer tid på det.)
