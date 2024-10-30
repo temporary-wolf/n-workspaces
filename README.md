@@ -26,7 +26,7 @@ Om jag skulle skriva om koden så som jag skulle uppskatta den så skulle jag ä
   Lösning: Jämför enums mot varandra.
 
 - Problem: Onödigt komplicerad business-logik för GetTollFee som också inte funkar som jag tycker den ska göra. See tolkning nedan för min tolkning. Efter närmare efterforskning så ser jag att den inte ens funkar...
-  Lösning: Använd tidsfönster-algoritm som definierat nedan
+- Lösning: Använd tidsfönster-algoritm som definierat nedan
 
 - Problem: Komplicerade if else statements i IsTollFreeDate där det inte är uppenbart vad de olika datumen representerar och som också går out of date
 - Lösning: Använd ett bibliotek som har koll på svenska helgdagar
